@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="expand_tab_item_height">45dp</dimen>
+
+
+
+    <dimen name="layout_view_hight">1dp</dimen>
+    <dimen name="button_margin_LR">20dp</dimen>
+    <dimen name="button_margin_T">30dp</dimen>
+    <dimen name="button_hight">50dp</dimen>
+    <dimen name="button_textsize">18sp</dimen>
+
+    <dimen name="title_xlarge_h">70dp</dimen>
+    <dimen name="layout_edit_name_marginleft">25dp</dimen>
+    <dimen name="layout_edit_height">45dp</dimen>
+    <dimen name="layout_view_marginLR">25dp</dimen>
+    <dimen name="activity_main_button_paing">4dp</dimen>
+
+
+    <dimen name="userorder_orderatiem_textsize">12sp</dimen>
+    <dimen name="userorder_orderamount_textsize">16sp</dimen>
+    <dimen name="userorder_orderamount_marfinright">15dp</dimen>
+    <!--我的订单子项列表-->
+    <dimen name="userorderitme_icon_width">100dp</dimen>
+    <dimen name="userorderitem_icon_htight">100dp</dimen>
+    <dimen name="userorderitem_icon_margin">5dp</dimen>
+    <dimen name="userorderitem_layout_marginleft">3dp</dimen>
+    <dimen name="userorderitem_layout_margintop">5dp</dimen>
+    <dimen name="userorderitem_pronumber_textsize">14sp</dimen>
+    <dimen name="userorderitem_pronumber_width">40dp</dimen>
+
+    <!--订单详情-->
+    <dimen name="orderinfo_title_height">50dp</dimen>
+    <dimen name="orderinfo_title_height_xlarge">70dp</dimen>
+    <dimen name="orderinfo_title_height_small">25dp</dimen>
+    <dimen name="orderinfo_title_img_width">18dp</dimen>
+    <dimen name="orderinfo_title_img_width_xlarge">26dp</dimen>
+    <dimen name="orderinfo_title_img_width_small">9dp</dimen>
+    <dimen name="orderinfo_title_img_marginLeft">15dp</dimen>
+    <dimen name="orderinfo_title_img_marginLeft_xlarge">30dp</dimen>
+    <dimen name="orderinfo_title_img_marginLeft_small">8dp</dimen>
+    <dimen name="orderinfo_title_text_textsize">18sp</dimen>
+    <dimen name="orderinfo_title_text_textsize_xlarge">26sp</dimen>
+    <dimen name="orderinfo_title_text_textsize_small">9sp</dimen>
+    <dimen name="orderinfo_type_layout_height">100dp</dimen>
+    <dimen name="orderinfo_type_layout_height_xlarge">200dp</dimen>
+    <dimen name="orderinfo_type_text_mearginLeft">40dp</dimen>
+    <dimen name="orderinfo_type_text_size">18sp</dimen>
+    <dimen name="orderinfo_tyep_img_width">100dp</dimen>
+    <dimen name="orderinfo_type_img_height">80dp</dimen>
+    <dimen name="orderinfo_tyep_img_width_xlarge">200dp</dimen>
+    <dimen name="orderinfo_type_img_height_xlarge">150dp</dimen>
+    <dimen name="orderinfo_type_img_marginRight">10dp</dimen>
+    <dimen name="orderinfo_type_img_marginRight_xlarge">20dp</dimen>
+    <dimen name="orderinfo_express_layout_margin">8dp</dimen>
+    <dimen name="orderinfo_express_layout_margin_xlarge">16dp</dimen>
+    <dimen name="orderinfo_express_img_width">20dp</dimen>
+    <dimen name="orderinfo_express_img_htight">20dp</dimen>
+    <dimen name="orderinfo_express_img_width_xlarge">35dp</dimen>
+    <dimen name="orderinfo_express_img_htight_xlarge">35dp</dimen>
+    <dimen name="orderinfo_express_text_layout_marginLeft">10dp</dimen>
+    <dimen name="orderinfo_express_text_layout_marginLeft_xlarge">20dp</dimen>
+    <dimen name="orderinfo_express_number_marginTop">5dp</dimen>
+    <dimen name="orderinfo_express_number_marginTop_xlarge">5dp</dimen>
+    <dimen name="orderinfo_express_time_marginLeft">10dp</dimen>
+    <dimen name="orderinfo_express_time_marginLeft_lxarge">20dp</dimen>
+    <dimen name="orderinfo_express_tiem_textsize">10dp</dimen>
+    <dimen name="orderinfo_S_margin">8dp</dimen>
+    <dimen name="orderinfo_S_img_widthandheight">18dp</dimen>
+    <dimen name="orderinfo_S_layout_marginLeft">10dp</dimen>
+    <dimen name="orderinfo_S_text_marginTop">5dp</dimen>
+    <dimen name="orderinfo_N_img_widthAndheight">18dp</dimen>
+    <dimen name="orderinfo_N_img_marginLeft">8dp</dimen>
+    <dimen name="orderinfo_N_layout_margin">10dp</dimen>
+    <dimen name="orderinfo_N_layout_text_marginTop">5dp</dimen>
+    <dimen name="orderinfo_D_layout_height">30dp</dimen>
+    <dimen name="orderinfo_D_layout_meaginLeft">8dp</dimen>
+    <dimen name="orderinfo_D_img_windAndheight">20dp</dimen>
+    <dimen name="orderinfo_D_text_marginLeft">8dp</dimen>
+    <dimen name="orderinfo_moeny_layout_height">35dp</dimen>
+    <dimen name="orderinfo_moeny_layout_marginLeft_marginRight">8dp</dimen>
+    <dimen name="orderinfo_moeny_text_textsize">16sp</dimen>
+    <dimen name="orderinfo_moeny_text2_textsize">14sp</dimen>
+    <dimen name="orderinfo_moeny_text3_textsize">15dp</dimen>
+    <dimen name="orderinfo_time_textsize">14sp</dimen>
+    <dimen name="orderinfo_time_marginTop">6dp</dimen>
+    <dimen name="orderinfo_time_layout_marginLeft">10dp</dimen>
+    <dimen name="orderinfo_time_layout_marginTop">15dp</dimen>
+    <dimen name="orderinfo_moeny_text3_mearginRight">10dp</dimen>
+    <dimen name="orderinfo_express_tiem_textsize_lxarge">20dp</dimen>
+    <dimen name="orderinfo_S_margin_lxarge">16dp</dimen>
+    <dimen name="orderinfo_S_img_widthandheight_lxarge">30dp</dimen>
+    <dimen name="orderinfo_S_layout_marginLeft_lxarge">20dp</dimen>
+    <dimen name="orderinfo_S_text_marginTop_lxarge">10dp</dimen>
+    <dimen name="orderinfo_N_img_widthAndheight_lxarge">30dp</dimen>
+    <dimen name="orderinfo_N_img_marginLeft_lxarge">46dp</dimen>
+    <dimen name="orderinfo_N_layout_margin_lxarge">20dp</dimen>
+    <dimen name="orderinfo_N_layout_text_marginTop_lxarge">10dp</dimen>
+    <dimen name="orderinfo_D_layout_height_lxarge">60dp</dimen>
+    <dimen name="orderinfo_D_layout_meaginLeft_lxarge">16dp</dimen>
+    <dimen name="orderinfo_D_img_windAndheight_lxarge">40dp</dimen>
+    <dimen name="orderinfo_D_text_marginLeft_lxarge">16dp</dimen>
+    <dimen name="orderinfo_moeny_layout_height_lxarge">70dp</dimen>
+    <dimen name="orderinfo_moeny_layout_marginLeft_marginRight_lxarge">16dp</dimen>
+    <dimen name="orderinfo_moeny_text_textsize_lxarge">30sp</dimen>
+    <dimen name="orderinfo_moeny_text2_textsize_lxarge">28sp</dimen>
+    <dimen name="orderinfo_moeny_text3_textsize_lxarge">30dp</dimen>
+    <dimen name="orderinfo_time_textsize_lxarge">28sp</dimen>
+    <dimen name="orderinfo_time_marginTop_lxarge">12dp</dimen>
+    <dimen name="orderinfo_time_layout_marginLeft_lxarge">20dp</dimen>
+    <dimen name="orderinfo_time_layout_marginTop_lxarge">30dp</dimen>
+    <dimen name="orderinfo_moeny_text3_mearginRight_lxarge">20dp</dimen>
+
+
+    <dimen name="main_img_p">20dp</dimen>
+</resources>

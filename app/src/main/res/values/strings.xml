@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">禾田付</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!--订单详情-->
+    <string name="orderinfo_title_text">订单详情</string>
+    <string name="orderinfo_money">实付款</string>
+    <string name="orderinfo_paymoeny">¥</string>
+    <string name="no_data">没有找到符合条件的资源</string>
+</resources>

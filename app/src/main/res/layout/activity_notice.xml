@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main_appbar"
+            android:gravity="center_vertical">
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/homepage_edittext_bg"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<EditText-->
+            <!--android:id="@+id/notice_search_et"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@null"-->
+            <!--android:editable="false"-->
+            <!--android:ellipsize="end"-->
+            <!--android:hint="请输入你要搜索的内容"-->
+            <!--android:lines="1"-->
+            <!--android:paddingLeft="8dp"-->
+            <!--android:textColorHint="@color/withe"-->
+            <!--android:textSize="14sp"/>-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/notice_search_img"-->
+            <!--android:layout_width="25dp"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:src="@drawable/sacan_icon"/>-->
+
+
+            <!--</RelativeLayout>-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="新闻资讯"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/notice_back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back_white"/>
+
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.github.jdsjlzx.recyclerview.LRecyclerView
+        android:id="@+id/notice_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </com.github.jdsjlzx.recyclerview.LRecyclerView>
+</android.support.design.widget.CoordinatorLayout>

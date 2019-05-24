@@ -1,0 +1,174 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.hechuang.hepay"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 24
+        versionName "2.5.14"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // Zipalign优化
+//            zipAlignEnabled true
+//            buildConfigField "boolean", "LOG_release", "true"
+//            shrinkResources true//去掉不用资源
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    allprojects {
+        repositories {
+            maven { url "https://jitpack.io" }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    defaultConfig {
+        applicationId "com.hechuang.hepay" //JPush上注册的包名.
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.hechuang.hepay",
+                JPUSH_APPKEY : "ed1179a1ce61c211b27b9fbe", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+}
+
+MobSDK {
+    appKey "2855792600ca4"
+    appSecret "f7f667c2c48924b386780d18afcbacd2"
+
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId "wx734679904993348f"
+                appSecret "b31efc49c43979201680a8d7721917fb"
+            }
+            WechatMoments {
+                appId "wx734679904993348f"
+                appSecret "b31efc49c43979201680a8d7721917fb"
+            }
+        }
+    }
+}
+dependencies {
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:support-v4:27.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    //rxjava
+    implementation 'io.reactivex:rxjava:x.y.z'
+    implementation 'io.reactivex:rxandroid:1.0.1'
+    //cookie管理
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    //
+    implementation 'com.squareup.okhttp:okhttp:2.7.5'
+    implementation 'org.mod4j.org.apache.commons:lang:2.1.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //butterkenife
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    //扫描二维码
+    implementation 'com.google.zxing:core:3.3.0'
+    //旋转动画
+    implementation 'com.yayandroid:Rotatable:1.1.2'
+    //下拉刷新列表
+    implementation 'com.github.jdsjlzx:LRecyclerView:1.5.0'
+    //百度定位
+    implementation files('libs/BaiduLBS_Android.jar')
+    //腾讯x5web框架
+    //欢迎页面圆形进度条
+    implementation 'com.octopus:round-progressbar:0.0.2'
+    //轮播图
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation files('libs/tbs_sdk_thirdapp_v3.2.0.1104_43200_sharewithdownload_withfilereader_withoutGame_obfs_20170609_115346.jar')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //上下滚动字幕
+    implementation 'com.github.paradoxie:AutoVerticalTextview:0.1'
+    //图片加载框架（用于下载图）
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //location
+    implementation 'com.google.android.gms:play-services-location:15.0.0'
+    implementation files('libs/alipaySdk-20180403.jar')
+    //极光推送
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
+    //百度语音
+    implementation files('libs/com.baidu.tts_2.3.1.20170808_e39ea89.jar')
+    implementation 'com.android.support:multidex:1.0.2'
+    /**
+     * 版本更新
+     */
+    implementation 'com.allenliu.versionchecklib:library:2.0.8'
+    /**
+     *  recyclerview的适配器
+     */
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+
+/**
+ *  商品详情属性选择
+ */
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    /**
+     * 微信sdk
+     */
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    /**
+     * aliyun热修复
+     */
+    implementation('com.aliyun.ams:alicloud-android-hotfix:3.2.6') {
+        exclude(module: 'alicloud-android-utdid')
+    }
+
+}
+repositories {
+    mavenCentral()
+}

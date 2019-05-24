@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dlalog_business_goodstype_goodsname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="商品名称"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/dlalog_business_goodstype_finsh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/close"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/dlalog_business_goodstype_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="规格："
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"/>
+
+    <com.zhy.view.flowlayout.TagFlowLayout
+        android:id="@+id/dlalog_business_goodstype_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/dlalog_business_goodstype_text"
+        app:max_select="1"/>
+
+    <RelativeLayout
+            android:id="@+id/dlalog_business_goodstype_pay_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/dlalog_business_goodstype_type">
+
+        <TextView
+            android:id="@+id/dlalog_business_goodstype_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:text="1.1"/>
+
+        <Button
+            android:id="@+id/dlalog_business_goodstype_pay"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="加入购物车"
+            android:textColor="@color/white"
+            android:background="@drawable/business_right_guige_button"
+            android:textSize="12sp"/>
+        <!--放在加的图标前面-->
+        <RelativeLayout
+            android:id="@+id/dlalog_business_goodstype_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/dlalog_business_goodstype_reduce"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@id/dlalog_business_goodstype_add"
+                android:layout_marginLeft="37dp"
+                android:layout_toLeftOf="@id/dlalog_business_goodstype_count"
+                android:src="@drawable/icon_goods_reduce"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/dlalog_business_goodstype_add"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/icon_goods_add"/>
+
+            <TextView
+                android:id="@+id/dlalog_business_goodstype_count"
+                android:layout_width="32dp"
+                android:layout_height="24dp"
+                android:layout_alignTop="@id/dlalog_business_goodstype_add"
+                android:layout_toLeftOf="@id/dlalog_business_goodstype_add"
+                android:gravity="center"
+                android:textColor="#333333"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

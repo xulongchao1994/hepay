@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <TextView
+            android:id="@+id/business_fragment_info_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:id="@+id/business_fragment_info_zhekoulayout"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/business_fragment_info_zhekoutext"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="#F29413"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="10sp"/>
+
+            <ImageView
+                android:id="@+id/business_fragment_info_zhekouicon"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/alliance_shop_zhekou"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="3dp"
+            android:src="@drawable/adder"/>
+
+        <TextView
+            android:id="@+id/business_fragment_info_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="#515151"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/business_fragment_info_phone"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/goodsinfo_kefu"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:padding="3dp"
+            android:src="@drawable/business_info_time"/>
+
+        <TextView
+            android:id="@+id/business_fragment_info_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="2"
+            android:textColor="#515151"/>
+
+        <Button
+            android:id="@+id/business_fragment_info_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:background="@drawable/business_pay"
+            android:text="买单"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <TextView
+        android:id="@+id/business_fragment_info_howpeople"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/appbg"
+        android:gravity="center"
+        android:padding="10dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:text="商家介绍"
+        android:textColor="@color/black"
+        android:textSize="16sp"/>
+
+    <include layout="@layout/view_1dp_h"/>
+
+    <TextView
+        android:id="@+id/business_fragment_info_context"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/black"
+        android:textSize="12sp"/>
+</LinearLayout>

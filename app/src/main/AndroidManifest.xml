@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hechuang.hepay">
+    <!-- 这个权限用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <!--打开相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--拨打电话-->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- if you want to load images from a file OR from the internet -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".base.SophixStubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/hetianpay_ic"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:roundIcon="@mipmap/hetianpay_ic_round"
+        android:supportsRtl="true"
+        android:theme="@style/start_app"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!--百度定位-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="BbpKYOzqxhazxgDgIvGDuKHVC1vxbfAX">
+
+        </meta-data>
+        <!--欢迎  入口-->
+        <activity
+            android:name=".ui.activity.WelcomeAcitivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+            <intent-filter>
+                <data
+                    android:host="text.com"
+                    android:scheme="hepay" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+            </intent-filter>
+
+        </activity>
+        <!--首页-->
+        <activity
+            android:name=".ui.activity.HePayActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+
+        <activity
+            android:name=".ui.activity.UserWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--扫描二维码-->
+        <activity
+            android:name="com.google.zxing.activity.CaptureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--登录-->
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--强制修改密码-->
+        <activity
+            android:name=".ui.activity.ForceModifyPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--红包列表-->
+        <activity
+            android:name=".ui.activity.RedPacketListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--红包详情-->
+        <activity
+            android:name=".ui.activity.RedPacketInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--选择城市-->
+        <activity
+            android:name=".ui.activity.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--web页面-->
+        <activity
+            android:name=".ui.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--联盟商家页面-->
+        <activity
+            android:name=".ui.activity.UnionShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--商家详情-->
+        <activity
+            android:name=".ui.activity.StoreInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--消息列表-->
+        <activity
+            android:name=".ui.activity.NewsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+
+        <!--消息详情-->
+        <activity
+            android:name=".ui.activity.NewsInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--新闻资讯页面-->
+        <activity
+            android:name=".ui.activity.NoticeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--新闻资讯详情-->
+        <activity
+            android:name=".ui.activity.NoticeInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--联盟商家改版-->
+        <activity
+            android:name=".ui.activity.UnionShop_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--扫描进入web的页面-->
+        <activity
+            android:name=".ui.activity.ScanWebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--联盟商家城市选择-->
+        <activity
+            android:name=".ui.activity.Union_SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--积分商城首页-->
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity"></activity>
+        <!--上传图片-->
+        <activity
+            android:name=".ui.activity.UploadImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--积分商城商品列表-->
+        <activity
+            android:name=".ui.activity.GoodsListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <activity
+            android:name=".ui.activity.AllOrderAcitivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <activity
+            android:name=".ui.activity.OrderInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--百度地图页面-->
+        <activity
+            android:name=".ui.activity.BaiDuMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--用户协议-->
+        <activity
+            android:name=".ui.activity.Login_AgreementActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--微信回调页面-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--微信登录后绑定用户-->
+        <activity
+            android:name=".ui.activity.BindingPhonenumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <activity
+            android:name=".ui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+
+        <!--（改）联盟商家首页-->
+        <activity
+            android:name=".ui.activity.AllianceShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+        <!--（改）联盟商家详情-->
+        <activity
+            android:name=".ui.activity.BusinessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity">
+
+        </activity>
+
+        <activity
+            android:name=".ui.activity.HTFGoodInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/start_activity" />
+        <!--自动登录-->
+        <service
+            android:name=".service.AutoLoginService"
+            android:sharedUserId="android.uid.system" />
+        <!--下载文件-->
+        <service
+            android:name=".service.DownLoadFileService"
+            android:sharedUserId="android.uid.system" />
+        <!--百度地图定位-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+        <!-- 替换原生极光推送接收器 -->
+
+
+        <receiver
+            android:name=".receiver.BoardcastReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" /><!--开机广播-->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /><!--网络状态改变广播-->
+                <category android:name="com.hechuang.hepay" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name=".service.JPushService"
+            android:enabled="true"
+            android:exported="false"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.hechuang.hepay" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hechuang.hepay.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <!--阿里云配置-->
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="25134841-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="b6d02e75734b70744cea41ca0393d447" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCz/DvG0dXxzW43I6C1LUCvHEiPUufZo31Su4B3MKIG7gBkFD+MwBcKXF9dpjmY5c8TMKOKQ+f4UwqkMGIMKuSXi25GLlvxfz9QLub2S5Q3rWRSq8yLzs0IhOYaU+aDOWEHfTdVT40MwVY3isqkJ4T0G98H5ZfOf/x6sDE6hQi3A9Lk/YP4gG6yevvw9QRiZBt8rte+5lE+yXi2up7TVUuomK+4SxPMndYBiE3JnM8hh3WZKC9G60KhbA6fMhdF7hLgGQvoQ3H6dU4qCJqwI39pgS9Ad4L+FUUCbGEIcFy/qhYu+JZDnj7ZmJLwIqn0fPICW8+RHMgFKLsR7c4qQYpxAgMBAAECggEBAJfugh9RHoKhYTpWbuDBtGqdO3sRBvonEjF2afkzKnMjEV1p4kNUG575Xt9U5CX3SBfw5PxgWj67Cq6S0RFoW9K5NnszwxVWzwFGtlyObC2bxqYqs94I0fcxCHSNAncfRpLl1oHDR1PPGJKGLIzpd0gBBwJJgx4j1+NRPB0kE7k4rJ4dE8qvl+07WWh+Bpg9Z2MeEsYhtGPIonyQ+uZeb9qiAGWCG+sBTZaov+xpxwmnNUfQllebDBjzGNngFoVEyi0kqWInrrkjKFXzV9Mx4GJ4C/ixiYDnRWhKrtSwWH+0l4lgxYn2CheV7B5yfybAD690qWCEgnYOuDsoeIepuskCgYEA25LB2C7lEw/eUUvn/AL174I0nZpATs+xrRs6GVBq+O/yiMawwo/c8OUFi3sZaNfZc/peclo50w6ABLuk3+UyUwLGqwLyQb6MdCQey7nHAC+RpUWQ8BlfgedrsiV8YWwDdAS+1EnvLj5sodzDMlySs45q5chZc2OusJN4odd74psCgYEA0dguR5Xy5bSR4bPx1jW/Cvt2AeQQxY67EbUyNX8Ymxu0eVVNt5UKJ3EECcIp+y7zTYF6dbBMZGJ+rJ9nRPUxzsGI4NKUjQK7uidAQBUk/0tLwLqLWOZthrED2jYvrf4VkPgu0swftyGlOCkxccHOblJOn+M5KzZh+hXpOMxfAeMCgYEAjw+TlRMY1c6k/zsBr0UOkDq5pWX3OGJCVZNDy3KGACP2Vf9+84VgYuQVNMfDyne4isQ5/S+kNUthRbQsvGRM4aERaCLHTOamBJX0KrCkZA6aSqCEyqr9e1oY5T1fSOpjZZgh7Zcua2boyJ1Z4NpICw1jwMtE3NW53/p1wpzvbrkCgYAZlIXHujK657Ek11+yoiiguRigkGGvA4AwX2s4dD7WoaD1bX2k1GlBd5hrbBzb/tQv7Ym1EQGu9wbEGkZndJBWyObbqS/spJmnzqMZbLpu2Inqe5MDCkvtsGRs1FApoKCWZHqovbNcCqDuYK8jU+HLNwNYoEVWzDFTYBpnDxrBywKBgC/xG9W5D5I404hcu+MKwHu7KTsqu6G+o7jUMTmzmKxWup5URYOgeh6lgHQh22/vPMH1jCEvOv8Bb3/dCEHYhRY9qaMc1yGy/Hp4wmk1Xm9ipd2Um3hGDxvKQuNgtK2x6Th1U45I2D2iMOycDZeuO0MjC566qDievHe82R6kRPWI" />
+    </application>
+
+</manifest>

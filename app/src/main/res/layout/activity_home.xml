@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.hechuang.hepay.customview.MyViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_rg"/>
+
+    <RadioGroup
+        android:id="@+id/main_rg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_home"
+            style="@style/activity_button_rt"
+            android:checked="true"
+            android:drawableTop="@drawable/main_home"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/main_goods"
+            style="@style/activity_button_rt"
+            android:drawableTop="@drawable/main_shore"
+            android:text="商品"/>
+
+        <RadioButton
+            android:id="@+id/main_shopping"
+            style="@style/activity_button_rt"
+            android:drawableTop="@drawable/main_shopping"
+            android:text="购物车"/>
+
+        <RadioButton
+            android:id="@+id/main_me"
+            style="@style/activity_button_rt"
+            android:drawableTop="@drawable/main_me"
+            android:text="我的"/>
+    </RadioGroup>
+</RelativeLayout>

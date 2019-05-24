@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="120dp"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/view_cut_off_rule"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/adapter_storeinfo_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:text="正阳县大骨汤火锅城"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:id="@+id/adapter_storeinfo_xiaofeibi"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/adapter_storeinfo_name"
+                    android:src="@drawable/shopping_img"/>
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_juli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:text="30km"
+                    android:textSize="10sp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/adapter_storeinfo_type"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:text="餐饮美食"
+                android:textSize="12sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_shuaka"
+                    style="@style/adapter_storeinfo_shuaka"
+                    android:layout_marginLeft="12dp"
+                    android:text="可刷卡"/>
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_wifi"
+                    style="@style/adapter_storeinfo_shuaka"
+                    android:layout_marginLeft="3dp"
+                    android:text="可刷卡"/>
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_weixinpay"
+                    style="@style/adapter_storeinfo_shuaka"
+                    android:layout_marginLeft="3dp"
+                    android:text="可刷卡"/>
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_zhifubao"
+                    style="@style/adapter_storeinfo_shuaka"
+                    android:layout_marginLeft="3dp"
+                    android:text="可刷卡"/>
+
+                <TextView
+                    android:id="@+id/adapter_storeinfo_tingchewei"
+                    style="@style/adapter_storeinfo_shuaka"
+                    android:layout_marginLeft="3dp"
+                    android:text="可刷卡"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/adapter_storeinfo_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:gravity="bottom"
+                android:paddingLeft="10dp"
+                android:text="河南省平顶山市汝州市丹阳中路党校对面"
+                android:textSize="10sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

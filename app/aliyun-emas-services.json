@@ -1,0 +1,35 @@
+{
+  "config": {
+	"emas.appKey":"25134841",
+	"emas.appSecret":"b6d02e75734b70744cea41ca0393d447",
+	"emas.packageName":"com.hechuang.hepay",
+	"hotfix.idSecret":"25134841-1",
+	"hotfix.rsaSecret":"MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCz/DvG0dXxzW43I6C1LUCvHEiPUufZo31Su4B3MKIG7gBkFD+MwBcKXF9dpjmY5c8TMKOKQ+f4UwqkMGIMKuSXi25GLlvxfz9QLub2S5Q3rWRSq8yLzs0IhOYaU+aDOWEHfTdVT40MwVY3isqkJ4T0G98H5ZfOf/x6sDE6hQi3A9Lk/YP4gG6yevvw9QRiZBt8rte+5lE+yXi2up7TVUuomK+4SxPMndYBiE3JnM8hh3WZKC9G60KhbA6fMhdF7hLgGQvoQ3H6dU4qCJqwI39pgS9Ad4L+FUUCbGEIcFy/qhYu+JZDnj7ZmJLwIqn0fPICW8+RHMgFKLsR7c4qQYpxAgMBAAECggEBAJfugh9RHoKhYTpWbuDBtGqdO3sRBvonEjF2afkzKnMjEV1p4kNUG575Xt9U5CX3SBfw5PxgWj67Cq6S0RFoW9K5NnszwxVWzwFGtlyObC2bxqYqs94I0fcxCHSNAncfRpLl1oHDR1PPGJKGLIzpd0gBBwJJgx4j1+NRPB0kE7k4rJ4dE8qvl+07WWh+Bpg9Z2MeEsYhtGPIonyQ+uZeb9qiAGWCG+sBTZaov+xpxwmnNUfQllebDBjzGNngFoVEyi0kqWInrrkjKFXzV9Mx4GJ4C/ixiYDnRWhKrtSwWH+0l4lgxYn2CheV7B5yfybAD690qWCEgnYOuDsoeIepuskCgYEA25LB2C7lEw/eUUvn/AL174I0nZpATs+xrRs6GVBq+O/yiMawwo/c8OUFi3sZaNfZc/peclo50w6ABLuk3+UyUwLGqwLyQb6MdCQey7nHAC+RpUWQ8BlfgedrsiV8YWwDdAS+1EnvLj5sodzDMlySs45q5chZc2OusJN4odd74psCgYEA0dguR5Xy5bSR4bPx1jW/Cvt2AeQQxY67EbUyNX8Ymxu0eVVNt5UKJ3EECcIp+y7zTYF6dbBMZGJ+rJ9nRPUxzsGI4NKUjQK7uidAQBUk/0tLwLqLWOZthrED2jYvrf4VkPgu0swftyGlOCkxccHOblJOn+M5KzZh+hXpOMxfAeMCgYEAjw+TlRMY1c6k/zsBr0UOkDq5pWX3OGJCVZNDy3KGACP2Vf9+84VgYuQVNMfDyne4isQ5/S+kNUthRbQsvGRM4aERaCLHTOamBJX0KrCkZA6aSqCEyqr9e1oY5T1fSOpjZZgh7Zcua2boyJ1Z4NpICw1jwMtE3NW53/p1wpzvbrkCgYAZlIXHujK657Ek11+yoiiguRigkGGvA4AwX2s4dD7WoaD1bX2k1GlBd5hrbBzb/tQv7Ym1EQGu9wbEGkZndJBWyObbqS/spJmnzqMZbLpu2Inqe5MDCkvtsGRs1FApoKCWZHqovbNcCqDuYK8jU+HLNwNYoEVWzDFTYBpnDxrBywKBgC/xG9W5D5I404hcu+MKwHu7KTsqu6G+o7jUMTmzmKxWup5URYOgeh6lgHQh22/vPMH1jCEvOv8Bb3/dCEHYhRY9qaMc1yGy/Hp4wmk1Xm9ipd2Um3hGDxvKQuNgtK2x6Th1U45I2D2iMOycDZeuO0MjC566qDievHe82R6kRPWI",
+	"httpdns.accountId":"194460",
+	"httpdns.secretKey":"e6347bfdcea41815a7125a069240af84"
+},
+  "services": {
+      "httpdns_service": {
+        "status": 1,
+        "version":"1.2.1"
+      },
+      "cps_service": {
+        "status": 1,
+        "version":"3.1.4"
+      },
+      "hotfix_service": {
+        "status": 1,
+        "version":"3.2.6"
+      },
+      "man_service": {
+        "status": 1,
+        "version":"1.2.4"
+      },
+      "feedback_service": {
+        "status": 1,
+        "version":"3.1.8"
+      }
+  },
+  "use_maven":true,
+  "proguard_keeplist":"\n#httpdns\n-keep class com.taobao.** {*;}\n-keep class com.alibaba.** {*;}\n-keep class com.ta.**{*;}\n-keep class com.ut.**{*;}\n-dontwarn com.taobao.**\n-dontwarn com.alibaba.**\n-dontwarn com.ta.**\n-dontwarn com.ut.**\n\n#cps\n-keep class com.taobao.** {*;}\n-keep class com.alibaba.** {*;}\n-keep class com.ta.**{*;}\n-keep class com.ut.**{*;}\n-dontwarn com.taobao.**\n-dontwarn com.alibaba.**\n-dontwarn com.ta.**\n-dontwarn com.ut.**\n-keepclasseswithmembernames class ** {\nnative <methods>;\n}\n-keepattributes Signature\n-keep class sun.misc.Unsafe { *; }\n-keep class com.alipay.** {*;}\n-dontwarn com.alipay.**\n-keep class anet.**{*;}\n-keep class org.android.spdy.**{*;}\n-keep class org.android.agoo.**{*;}\n-dontwarn anet.**\n-dontwarn org.android.spdy.**\n-dontwarn org.android.agoo.**\n\n#hotfix\n#基线包使用，生成mapping.txt\n-printmapping mapping.txt\n#生成的mapping.txt在app/buidl/outputs/mapping/release路径下，移动到/app路径下\n#修复后的项目使用，保证混淆结果一致\n#-applymapping mapping.txt\n#hotfix\n-keep class com.taobao.sophix.**{*;}\n-keep class com.ta.utdid2.device.**{*;}\n#防止inline\n-dontoptimize\n\n#man\n-keep class com.taobao.** {*;}\n-keep class com.alibaba.** {*;}\n-keep class com.ta.**{*;}\n-keep class com.ut.**{*;}\n-dontwarn com.taobao.**\n-dontwarn com.alibaba.**\n-dontwarn com.ta.**\n-dontwarn com.ut.**\n\n#feedback\n-keep class com.taobao.** {*;}\n-keep class com.alibaba.** {*;}\n-keep class com.ta.**{*;}\n-keep class com.ut.**{*;}\n-dontwarn com.taobao.**\n-dontwarn com.alibaba.**\n-dontwarn com.ta.**\n-dontwarn com.ut.**\n"
+}
